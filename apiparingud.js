@@ -99,12 +99,12 @@ async function handleFormSubmit(event) {
 }
 
 async function listiraamatud() {
-    const responseData = await getDataAsJson("https://talvikhslab12.azurewebsites.net/raamatud/");
+    const responseData = await getDataAsJson("https://talvikhslab12raamatud.azurewebsites.net/raamatud/");
     const resultElement = document.getElementById("raamatud_result");
     resultElement.innerHTML = "";
     for (var raamat of responseData.raamatud){
-        resultElement.innerHTML += '<a href="https://talvikhslab12.azurewebsites.net/raamatud/'+raamat+'"  download="'+raamat+'" >' +raamat+".txt</a> " +
-                '<a href="#" onclick="deleteObject(\'https://talvikhslab12.azurewebsites.net/raamatud/'+raamat+'\')" > [kustuta]</a>' +
+        resultElement.innerHTML += '<a href="https://talvikhslab12raamatud.azurewebsites.net/raamatud/'+raamat+'"  download="'+raamat+'" >' +raamat+".txt</a> " +
+                '<a href="#" onclick="deleteObject(\'https://talvikhslab12raamatud.azurewebsites.net/raamatud/'+raamat+'\')" > [kustuta]</a>' +
                 "<br />";
     }
 
